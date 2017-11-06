@@ -5,12 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 
-    public int playerSpeed = 10;
+    public int playerSpeed = 40;
     public bool facingRight = false;
     public int playerJumpPower=100;
     public float moveX;
     private bool hasBeenGrounded;
+    public float maxSpeed = 20f;
+   
     private void Start()
+
     {
         Jump();
     }
@@ -43,7 +46,14 @@ public class PlayerController : MonoBehaviour {
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
 
-   void Jump()
+    private void FixedUpdate()
+    {
+        if (gameObject.GetComponent<Rigidbody2D>().velocity.y > maxSpeed)
+        {
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, maxSpeed);
+        }
+    }
+    void Jump()
     {
         //JUMPING CODE
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
