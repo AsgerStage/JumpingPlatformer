@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Wall
+  - pickUp
+  - toxic
   layers:
   - Default
   - TransparentFX
