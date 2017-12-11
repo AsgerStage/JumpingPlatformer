@@ -8,13 +8,16 @@ public class PlayerHealth : MonoBehaviour {
     public int health;
     public bool hasDied;
     public Text Score;
+    public Text Lives;
     private int count;
+    private static int deathCount =0;
 
     // Use this for initialization
     void Start () {
         hasDied = false;
-        count = 0;
+        //count = 0;
         setCountText();
+        setLiveText();
 
     }
 
@@ -32,7 +35,10 @@ public class PlayerHealth : MonoBehaviour {
 	}
     IEnumerator Die()
     {
+
+        deathCount++;
         SceneManager.LoadScene("Platformer");
+        setLiveText();
         yield return null;
        
 
@@ -54,6 +60,11 @@ public class PlayerHealth : MonoBehaviour {
     void setCountText()
     {
         Score.text = "Score: " + count.ToString();
+    }
+
+    void setLiveText()
+    {
+        Lives.text = "Attempts: " + deathCount.ToString();
     }
 
 }

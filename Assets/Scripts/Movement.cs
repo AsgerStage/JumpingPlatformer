@@ -3,25 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour {
-    public float xSpeed =  0.1f;
-    public float ySpeed = 0.0f;
-    private float nextActionTime = 0.0f;
-    public float period = 3f;
-    // Use this for initialization
+
+    public Vector3 pos1 = new Vector3();
+    public Vector3 pos2 = new Vector3();
+    public float speed = 1.0f;
+
     void Start () {
-		
-	}
+       
+    }
 	
 	// Update is called once per frame
 	void Update () {
-
-        if (Time.time > nextActionTime)
-        {
-            nextActionTime += period;
-
-            xSpeed = xSpeed * -1;
-            ySpeed = ySpeed * -1;
-        }
-        transform.Translate(xSpeed * Time.deltaTime, ySpeed * Time.deltaTime, 0);
+        transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
     }
 }
