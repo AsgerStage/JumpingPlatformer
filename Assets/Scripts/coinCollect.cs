@@ -27,4 +27,9 @@ public class coinCollect : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+
+    public int getPValue()
+    {
+        return pickupValue;
+    }
 }
