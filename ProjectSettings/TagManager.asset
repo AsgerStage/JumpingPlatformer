@@ -9,6 +9,7 @@ TagManager:
   - pickUp
   - toxic
   - Button
+  - platform
   layers:
   - Default
   - TransparentFX

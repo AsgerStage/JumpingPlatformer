@@ -13,7 +13,24 @@ public class button : MonoBehaviour {
         if (gObj.CompareTag("Player"))
         {
             gameObject.GetComponent<Renderer>().material.color = Color.green;
-            activeObject.SetActive(true);
+
+            StartCoroutine("active");
         }
     }
+
+    IEnumerator active()
+    {
+
+
+        gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+
+        yield return new WaitForSeconds(0.2f);
+        
+        activeObject.SetActive(!activeObject.activeSelf);
+        Debug.Log("hit!");
+
+    }
+
+
+
 }

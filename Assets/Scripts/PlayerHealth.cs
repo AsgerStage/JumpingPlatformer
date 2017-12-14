@@ -53,6 +53,12 @@ public class PlayerHealth : MonoBehaviour {
             coinCollect cC = gObj.GetComponent<coinCollect>();
             count = count + cC.getPValue();
                 setCountText();
+            Destroy(gObj);
+        }
+        else if (gObj.CompareTag("toxic"))
+        {
+            StartCoroutine("Die");
+            Debug.Log("Toxic pickup");
         }
 
     }
@@ -67,4 +73,8 @@ public class PlayerHealth : MonoBehaviour {
         Lives.text = "Attempts: " + deathCount.ToString();
     }
 
+    public int getPValue()
+    {
+        return count;
+    }
 }
