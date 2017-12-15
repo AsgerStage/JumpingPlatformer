@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class highscoreList : MonoBehaviour {
 
@@ -10,32 +11,51 @@ public class highscoreList : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-          string test = "";
-     //   PlayerPrefs.SetString("highscore", "10-box"+"_"+ "16-box" + "_" + "15-box" + "_" + "13-box");
-        string[] players = PlayerPrefs.GetString("highscore").Split('_');
+         string test = "";
+         string[] players = PlayerPrefs.GetString("highscore").Split('_');
 
-        //   Debug.Log(players.Length);
+   
 
+        int[] scores = new int[players.Length];
+        string[] playerHighscore = new string[players.Length];
+        for (int i = 0; i <= players.Length - 1; i++)
+        {
+            string[] temp = players[i].Split('-');
+            scores[i] = Int32.Parse(temp[0]);
+            playerHighscore[i] = temp[1];
+        }
 
-      for(int i = 0; i <= players.Length-1; i++) {
-        string[] scores = players[i].Split('-');
-          test = test + scores[1] + " ";
+        int tempInt;
+        string tempString;
+        for (int i = 0; i <= scores.Length -1 ; i++)
+        {
+            for (int j = 0; j <= scores.Length -1 ; j++)
+            {
+            
+                if (scores[i] > scores[j])
+                {
+                    tempInt = scores[i];
+                    scores[i] = scores[j];
+                    scores[j] = tempInt;
 
-        //          Debug.Log(players[i]);
-           }
+                    tempString = playerHighscore[i];
+                    playerHighscore[i] = playerHighscore[j];
+                    playerHighscore[j] = tempString;
+                }
 
+            }
+        }
 
-        
-        Debug.Log(players[0].Split('-')[1]);
-        Debug.Log(players[1]);
-        Debug.Log(PlayerPrefs.GetString("highscore"));
+        int run;
+        if (players.Length > 10)
+            run = 10;
+        else
+            run = players.Length - 1;
+        for (int i = 0; i < run ; i++)
+        {
+            test = test + playerHighscore[i] + "   " + scores[i] + "\r\n";
+        }
 
           highscore.text = test;
-        // highscore.text = PlayerPrefs.GetString("highscore");
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }
