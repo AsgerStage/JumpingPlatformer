@@ -57,6 +57,8 @@ public class CameraController : MonoBehaviour
 
             //  if (dist < 0.08 && hasBeenCentered == true)
             //{
+            if(playerPos.y<yMin)playerPos.y = Mathf.Clamp(player.transform.position.y, yMin, yMax); //Stops camera from going below the lowest ground level
+
             transform.position = Vector3.Lerp(transform.position, playerPos + offset, 0.6f);
             /*  }
               else
