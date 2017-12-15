@@ -76,4 +76,9 @@ public class PlayerHealth : MonoBehaviour {
     {
         return count;
     }
+
+    public int getAttempts()
+    {
+        return deathCount;
+    }
 }

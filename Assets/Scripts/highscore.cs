@@ -2,23 +2,61 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
 
 public class highscore : MonoBehaviour {
 
     public InputField highscoreName;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+
+    private void Update()
+    {
+        
+        if (GameObject.Find("highScoreInput"))
+        Time.timeScale = 0;
+    }
 
     public void OnSubmit()
     {
-        Debug.Log("Your name: " + highscoreName.text);
+    PlayerHealth ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
+        int points = ph.getPValue();
+        int deaths = ph.getAttempts();
+
+      //  PlayerPrefs.DeleteAll();
+
+        if (PlayerPrefs.HasKey("highscore"))
+        {
+         
+            PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_"+ (points - (deaths * 2))+"-"+highscoreName.text);
+
+            string[] players = PlayerPrefs.GetString("highscore").Split('_');
+
+            Array.Sort(players);
+
+            PlayerPrefs.SetString("highscore", "");
+
+            for (int i = 0; i <= players.Length-1; i++)
+            {
+                if(i == 0)
+                    PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + players[players.Length - 1 - i]);
+
+                else
+                    PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_"+ players[players.Length-1-i]);
+
+              //  Debug.Log(players[players.Length - 1 - i]);
+
+            }
+
+        }
+        else
+        {
+            PlayerPrefs.SetString("highscore", (points - (deaths * 2))+"-"+highscoreName.text);
+        }
+
+      //  Debug.Log(PlayerPrefs.GetString("highscore"));
+
+        SceneManager.LoadScene("Menu");
     }
 
 }
