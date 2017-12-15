@@ -34,7 +34,7 @@ public class nextLevel : MonoBehaviour {
 
             Debug.Log("test" + PlayerPrefs.GetString("highscore"));
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
         }
 
 

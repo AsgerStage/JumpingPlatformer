@@ -15,7 +15,6 @@ public class PlayerHealth : MonoBehaviour {
     // Use this for initialization
     void Start () {
         hasDied = false;
-        //count = 0;
         setCountText();
         setLiveText();
 
