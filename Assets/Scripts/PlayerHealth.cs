@@ -39,7 +39,7 @@ public class PlayerHealth : MonoBehaviour {
     {
 
         deathCount++;
-        SceneManager.LoadScene("Platformer");
+        SceneManager.LoadScene("Level1");
         setLiveText();
         yield return null;
        
