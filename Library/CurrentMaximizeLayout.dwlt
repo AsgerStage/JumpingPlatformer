@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 3661
+  controlID: 380
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,10 +121,10 @@ MonoBehaviour:
     y: 0
     width: 1210
     height: 947
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 3599
+  controlID: 346
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -178,14 +178,14 @@ MonoBehaviour:
     width: 1208
     height: 422
   m_SceneLighting: 1
-  lastFramingTime: 5509.027891072677
+  lastFramingTime: 98.14573628689627
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.0461104, y: -0.1635559, z: 0.00066542404}
+    m_Target: {x: 19.526, y: 1.879, z: 0}
     speed: 2
-    m_Value: {x: 2.0461104, y: -0.1635559, z: 0.00066542404}
+    m_Value: {x: 19.526, y: 1.879, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -212,9 +212,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.162281
+    m_Target: 17.717247
     speed: 2
-    m_Value: 2.162281
+    m_Value: 17.717247
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 0
+  m_ViewIsLockedToObject: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 443
     width: 1210
     height: 504
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 3662
+  controlID: 381
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -353,10 +353,10 @@ MonoBehaviour:
     width: 358
     height: 435
   m_TreeViewState:
-    scrollPos: {x: 0, y: 46}
-    m_SelectedIDs: ea4dfdff
-    m_LastClickedID: -176662
-    m_ExpandedIDs: a2d2feffcae5ffff00000000cc350000e2350000828000007c810000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 4a3f0000
+    m_LastClickedID: 16202
+    m_ExpandedIDs: a2d2feff40d7ffff3cdaffffcae5ffff00000000cc350000e2350000203f00001a4000006e400000828000007c810000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -443,18 +443,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Asger\Documents\GitHub\JumpingPlatformer
+  m_LastProjectPath: C:\Users\Hexor\Documents\GitHub\JumpingPlatformer
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 300}
     m_SelectedIDs: 042a0000
     m_LastClickedID: 10756
-    m_ExpandedIDs: 00000000d02e0000e42e0000962f0000a8300000ac300000cc3000000231000062310000723100007431000080310000883100004e320000c8320000ca320000fc320000fe3200000c330000183300004a3300004e33000098330000e83300007034000074340000763400007834000096340000ce340000e83400002635000024370000
+    m_ExpandedIDs: 00000000dc2d0000122e0000b02e0000be2f0000de2f000014300000743000008430000086300000923000009a3000005e310000d6310000d83100000a3200000c3200001a32000026320000583200005c320000a6320000f6320000143300008233000086330000883300008a330000a8330000e0330000fa33000038340000b8360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -479,10 +479,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 124}
-    m_SelectedIDs: ea4dfdff
+    scrollPos: {x: 0, y: 304}
+    m_SelectedIDs: 4a3f0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d02e0000e42e0000962f0000a8300000ac300000cc3000000231000062310000723100007431000080310000883100004e320000c8320000ca320000fc320000fe3200000c330000183300004a3300004e33000098330000e83300007034000074340000763400007834000096340000ce340000e83400002635000024370000
+    m_ExpandedIDs: 00000000dc2d0000122e0000b02e0000be2f0000de2f000014300000743000008430000086300000923000009a3000005e310000d6310000d83100000a3200000c3200001a32000026320000583200005c320000a6320000f6320000143300008233000086330000883300008a330000a8330000e0330000fa33000038340000b8360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -507,8 +507,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ea4dfdff
-    m_LastClickedInstanceID: -176662
+    m_SelectedInstanceIDs: 4a3f0000
+    m_LastClickedInstanceID: 16202
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:

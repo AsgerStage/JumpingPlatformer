@@ -1289,15 +1289,10 @@ Prefab:
         type: 2}
       propertyPath: activeObject
       value: 
-      objectReference: {fileID: 621961908}
+      objectReference: {fileID: 1023295070}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4457b0aad18b2e74db0af28df5c8e707, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &621961908 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1191086299305862, guid: 4457b0aad18b2e74db0af28df5c8e707,
-    type: 2}
-  m_PrefabInternal: {fileID: 621961907}
 --- !u!4 &621961909 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4732921937564040, guid: 4457b0aad18b2e74db0af28df5c8e707,
