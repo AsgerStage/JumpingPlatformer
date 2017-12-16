@@ -20,9 +20,12 @@ public class PlayerHealth : MonoBehaviour {
 
     }
 
-	
-	// Update is called once per frame
-	void Update () {
+    private void Awake()
+    {
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (gameObject.transform.position.y < -3)
         {
             hasDied = true;
@@ -53,7 +56,7 @@ public class PlayerHealth : MonoBehaviour {
             count = count + cC.getPValue();
                 setCountText();
             AudioSource source = GetComponent<AudioSource>();
-            source.Play();
+            AudioSource.PlayClipAtPoint(source.clip, GameObject.FindGameObjectWithTag("MainCamera").transform.position, 1f);
             Destroy(gObj);
         }
         else if (gObj.CompareTag("toxic"))

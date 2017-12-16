@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     // private bool hasBeenGrounded; //outphased
     public float maxSpeed = 4f;
     private Rigidbody2D rigidbody;
-  
+   
 
 
     private void Start()
@@ -21,16 +21,13 @@ public class PlayerController : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        //  Jump();
+
+
+
     }
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-    
-    
-   
+
+
+
 
     void playerMove()
     {
