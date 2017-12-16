@@ -14,7 +14,6 @@ public class highscoreList : MonoBehaviour {
          string test = "";
          string[] players = PlayerPrefs.GetString("highscore").Split('_');
 
-   
 
         int[] scores = new int[players.Length];
         string[] playerHighscore = new string[players.Length];

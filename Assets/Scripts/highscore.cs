@@ -23,7 +23,7 @@ public class highscore : MonoBehaviour {
         int points = ph.getPValue();
         int deaths = ph.getAttempts();
 
-     
+    //    PlayerPrefs.DeleteAll();
 
         if (PlayerPrefs.HasKey("highscore"))
         {
@@ -31,10 +31,6 @@ public class highscore : MonoBehaviour {
             PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_"+ (points - (deaths * 2))+"-"+highscoreName.text);
 
             string[] players = PlayerPrefs.GetString("highscore").Split('_');
-          
-
-          
-
           
 
             PlayerPrefs.SetString("highscore", "");
@@ -54,6 +50,8 @@ public class highscore : MonoBehaviour {
             PlayerPrefs.SetString("highscore", (points - (deaths * 2))+"-"+highscoreName.text);
         }
 
+
+        Debug.Log(PlayerPrefs.GetString("highscore"));
         SceneManager.LoadScene("Menu");
     }
 

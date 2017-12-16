@@ -19,7 +19,7 @@ public class nextLevel : MonoBehaviour {
             activeObject.SetActive(true);
             try
             { 
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+               SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             catch { }
         }

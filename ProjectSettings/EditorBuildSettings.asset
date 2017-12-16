@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Platformer.unity
     guid: c3e247ab70082fa4ba0cdf26884ceb45
+  - enabled: 1
+    path: Assets/Level1.unity
+    guid: 992d8bdd675cdca49ba6e2f0fd6b1e95
+  - enabled: 1
+    path: Assets/Level2.unity
+    guid: 97cde702d5a66b04cbe9f93c444ea03d

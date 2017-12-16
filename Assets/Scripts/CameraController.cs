@@ -35,7 +35,7 @@ public class CameraController : MonoBehaviour
         {
             GetComponent<AudioSource>().Play();
             GetComponent<AudioSource>().loop = true;
-            DontDestroyOnLoad(gameObject);
+       //     DontDestroyOnLoad(gameObject);
             AudioBegin = true;
         }
     }
