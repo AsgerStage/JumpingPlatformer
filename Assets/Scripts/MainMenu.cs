@@ -10,6 +10,11 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
         PlayerPrefs.SetInt("attempts", 0);
         PlayerPrefs.SetInt("points", 0);
+
+        if (!PlayerPrefs.HasKey("highscore"))
+        {
+            PlayerPrefs.SetString("highscore", "");
+        }
     }
 
     public void QuitGame()
