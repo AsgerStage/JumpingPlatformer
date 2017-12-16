@@ -52,6 +52,8 @@ public class PlayerHealth : MonoBehaviour {
             coinCollect cC = gObj.GetComponent<coinCollect>();
             count = count + cC.getPValue();
                 setCountText();
+            AudioSource source = GetComponent<AudioSource>();
+            source.Play();
             Destroy(gObj);
         }
         else if (gObj.CompareTag("toxic"))

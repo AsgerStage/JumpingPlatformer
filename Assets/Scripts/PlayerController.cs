@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         moveX = Input.GetAxis("Horizontal");
         if (Input.GetButton("Jump"))
         {
-            maxSpeed = 5.5f;
+            maxSpeed = 6f;
             // Jump();
         }
         else maxSpeed = 4;
