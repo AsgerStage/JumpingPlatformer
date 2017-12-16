@@ -15,13 +15,37 @@ public class CameraController : MonoBehaviour
     public Vector3 offset;
     Vector3 playerPos;
     bool hasBeenCentered;
+    static bool AudioBegin = false;
 
     // Use this for initialization
+
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.transform.position;
         bool hasBeenCentered = true;
+    }
+
+
+    
+    void Awake()
+    {
+        if (!AudioBegin)
+        {
+            GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().loop = true;
+            DontDestroyOnLoad(gameObject);
+            AudioBegin = true;
+        }
+    }
+    void Update()
+    {
+        if (Application.loadedLevelName == "Upgraded")
+        {
+            GetComponent<AudioSource>().Stop();
+            AudioBegin = false;
+        }
     }
 
     // Update is called once per frame

@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     // private bool hasBeenGrounded; //outphased
     public float maxSpeed = 4f;
     private Rigidbody2D rigidbody;
+  
 
 
     private void Start()
@@ -25,8 +26,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
+    
+    
+   
+
     void playerMove()
     {
         //CONTROLS
