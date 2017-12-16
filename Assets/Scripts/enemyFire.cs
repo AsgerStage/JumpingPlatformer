@@ -13,7 +13,7 @@ public class enemyFire : MonoBehaviour {
 
     IEnumerator active()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         GameObject bullet= Instantiate(gObj, firePoint);
         bullet.transform.parent = null;
         StartCoroutine("active");
