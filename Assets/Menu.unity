@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258326c9e2dc36340bbd6a8f02c9163b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highscore: {fileID: 1081307267}
 --- !u!1 &126403984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,6 +1812,7 @@ GameObject:
   - component: {fileID: 1919564287}
   - component: {fileID: 1919564286}
   - component: {fileID: 1919564285}
+  - component: {fileID: 1919564288}
   m_Layer: 5
   m_Name: Highscore
   m_TagString: Untagged
@@ -1933,6 +1935,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1919564283}
+--- !u!114 &1919564288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919564283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dbaa29999916ad4c8124b00d0fcad83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highscore: {fileID: 1081307267}
 --- !u!1 &1969344266
 GameObject:
   m_ObjectHideFlags: 0

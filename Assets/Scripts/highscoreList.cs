@@ -11,8 +11,8 @@ public class highscoreList : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-         string test = "";
-         string[] players = PlayerPrefs.GetString("highscore").Split('_');
+        string test = "";
+        string[] players = PlayerPrefs.GetString("highscore").Split('_');
 
 
         int[] scores = new int[players.Length];
@@ -26,11 +26,11 @@ public class highscoreList : MonoBehaviour {
 
         int tempInt;
         string tempString;
-        for (int i = 0; i <= scores.Length -1 ; i++)
+        for (int i = 0; i <= scores.Length - 1; i++)
         {
-            for (int j = 0; j <= scores.Length -1 ; j++)
+            for (int j = 0; j <= scores.Length - 1; j++)
             {
-            
+
                 if (scores[i] > scores[j])
                 {
                     tempInt = scores[i];
@@ -50,11 +50,11 @@ public class highscoreList : MonoBehaviour {
             run = 10;
         else
             run = players.Length;
-        for (int i = 0; i < run ; i++)
+        for (int i = 0; i < run; i++)
         {
             test = test + playerHighscore[i] + "   " + scores[i] + "\r\n";
         }
 
-          highscore.text = test;
+        highscore.text = test;
     }
 }
