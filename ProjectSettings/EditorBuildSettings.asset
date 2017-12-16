@@ -7,13 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: 
-    guid: 1779a6090d4ef7f4d8593ebbcb0a63be
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Platformer.unity
+    guid: c3e247ab70082fa4ba0cdf26884ceb45
   - enabled: 1
     path: Assets/Menu.unity
     guid: cc601a848c895fd4285ba1d2bc8c8f93
-  - enabled: 1
-    path: Assets/Platformer.unity
-    guid: c3e247ab70082fa4ba0cdf26884ceb45
   - enabled: 1
     path: Assets/Level1.unity
     guid: 992d8bdd675cdca49ba6e2f0fd6b1e95

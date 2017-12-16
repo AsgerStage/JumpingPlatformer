@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour {
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        PlayerPrefs.SetInt("attempts", 0);
+        PlayerPrefs.SetInt("points", 0);
     }
 
     public void QuitGame()

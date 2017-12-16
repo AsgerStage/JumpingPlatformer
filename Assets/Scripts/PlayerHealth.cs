@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour {
     public Text Score;
     public Text Lives;
     private int count;
-    private static int deathCount =0;
+   // public static int deathCount =0;
 
     // Use this for initialization
     void Start () {
@@ -37,9 +37,9 @@ public class PlayerHealth : MonoBehaviour {
 	}
     IEnumerator Die()
     {
-
-        deathCount++;
-        SceneManager.LoadScene("Level1");
+        PlayerPrefs.SetInt("points", PlayerPrefs.GetInt("points") -count);
+        PlayerPrefs.SetInt("attempts", PlayerPrefs.GetInt("attempts")+1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         setLiveText();
         yield return null;
        
@@ -54,7 +54,10 @@ public class PlayerHealth : MonoBehaviour {
         {
             coinCollect cC = gObj.GetComponent<coinCollect>();
             count = count + cC.getPValue();
-                setCountText();
+
+            PlayerPrefs.SetInt("points", PlayerPrefs.GetInt("points") + 1);
+
+            setCountText();
             AudioSource source = GetComponent<AudioSource>();
             AudioSource.PlayClipAtPoint(source.clip, GameObject.FindGameObjectWithTag("MainCamera").transform.position, 1f);
             Destroy(gObj);
@@ -64,25 +67,32 @@ public class PlayerHealth : MonoBehaviour {
             StartCoroutine("Die");
         }
 
+
+
     }
 
-    void setCountText()
+
+void setCountText()
     {
-        Score.text = "Score: " + count.ToString();
+        Score.text = "Score: " + PlayerPrefs.GetInt("points") ;
     }
 
     void setLiveText()
     {
-        Lives.text = "Attempts: " + deathCount.ToString();
+        Lives.text = "Attempts: " + PlayerPrefs.GetInt("attempts");
     }
 
-    public int getPValue()
-    {
-        return count;
-    }
+  //  public int getPValue()
+  //  {
+ //       return count;
+ //   }
 
     public int getAttempts()
     {
-        return deathCount;
+        return PlayerPrefs.GetInt("attempts");
     }
+
+
+
+
 }

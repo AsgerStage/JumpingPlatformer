@@ -12,7 +12,8 @@ public class nextLevel : MonoBehaviour {
     {
         GameObject gObj = other.gameObject;
         PlayerHealth ph = gObj.GetComponent<PlayerHealth>();
-        int points = ph.getPValue();
+        int points = PlayerPrefs.GetInt("points");
+    //    ph.getPValue();
 
         if (gObj.CompareTag("Player") && points > minScore)
         {

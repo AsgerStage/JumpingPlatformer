@@ -20,7 +20,9 @@ public class highscore : MonoBehaviour {
     public void OnSubmit()
     {
     PlayerHealth ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
-        int points = ph.getPValue();
+
+        int points = PlayerPrefs.GetInt("points");
+     //   int points = ph.getPValue();
         int deaths = ph.getAttempts();
 
     //    PlayerPrefs.DeleteAll();
