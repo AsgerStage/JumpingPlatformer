@@ -219,6 +219,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\options.cs" />
     <Compile Include="Assets\Scripts\bulletMovement.cs" />
     <Compile Include="Assets\Scripts\button.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />

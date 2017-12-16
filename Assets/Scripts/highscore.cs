@@ -22,29 +22,33 @@ public class highscore : MonoBehaviour {
     PlayerHealth ph = GameObject.Find("Player").GetComponent<PlayerHealth>();
 
         int points = PlayerPrefs.GetInt("points");
-     //   int points = ph.getPValue();
         int deaths = ph.getAttempts();
 
     //    PlayerPrefs.DeleteAll();
 
         if (PlayerPrefs.HasKey("highscore"))
         {
-         
-            PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_"+ (points - (deaths * 2))+"-"+highscoreName.text);
+            if (PlayerPrefs.GetString("highscore").Equals(""))
+            {
+                PlayerPrefs.SetString("highscore", (points - (deaths * 2)) + "-" + highscoreName.text);
+            }
+            else
+            { PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_" + (points - (deaths * 2)) + "-" + highscoreName.text); }
+                
 
-            string[] players = PlayerPrefs.GetString("highscore").Split('_');
+            //string[] players = PlayerPrefs.GetString("highscore").Split('_');
           
 
-            PlayerPrefs.SetString("highscore", "");
+            //PlayerPrefs.SetString("highscore", "");
 
-            for (int i = 0; i <= players.Length-1; i++)
-            {
-                if(i == 0)
-                    PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + players[players.Length - 1 - i]);
+            //for (int i = 0; i <= players.Length-1; i++)
+            //{
+            //    if(i == 0)
+            //        PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + players[players.Length - 1 - i]);
 
-                else
-                    PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_"+ players[players.Length-1-i]);
-            }
+            //    else
+            //        PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_"+ players[players.Length-1-i]);
+            //}
 
         }
         else

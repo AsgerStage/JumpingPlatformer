@@ -49,7 +49,7 @@ public class highscoreList : MonoBehaviour {
         if (players.Length > 10)
             run = 10;
         else
-            run = players.Length - 1;
+            run = players.Length;
         for (int i = 0; i < run ; i++)
         {
             test = test + playerHighscore[i] + "   " + scores[i] + "\r\n";
