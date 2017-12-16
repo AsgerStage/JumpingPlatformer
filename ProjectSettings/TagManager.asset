@@ -10,6 +10,7 @@ TagManager:
   - toxic
   - Button
   - platform
+  - enemy
   layers:
   - Default
   - TransparentFX

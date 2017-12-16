@@ -57,7 +57,6 @@ public class PlayerHealth : MonoBehaviour {
         else if (gObj.CompareTag("toxic"))
         {
             StartCoroutine("Die");
-            Debug.Log("Toxic pickup");
         }
 
     }

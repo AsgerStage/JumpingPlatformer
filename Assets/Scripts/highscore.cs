@@ -46,9 +46,6 @@ public class highscore : MonoBehaviour {
 
                 else
                     PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_"+ players[players.Length-1-i]);
-
-              //  Debug.Log(players[players.Length - 1 - i]);
-
             }
 
         }
@@ -56,8 +53,6 @@ public class highscore : MonoBehaviour {
         {
             PlayerPrefs.SetString("highscore", (points - (deaths * 2))+"-"+highscoreName.text);
         }
-
-      //  Debug.Log(PlayerPrefs.GetString("highscore"));
 
         SceneManager.LoadScene("Menu");
     }
