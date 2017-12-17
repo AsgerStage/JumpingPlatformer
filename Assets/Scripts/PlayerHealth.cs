@@ -42,7 +42,6 @@ public class PlayerHealth : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         setLiveText();
         yield return null;
-       
 
     }
 

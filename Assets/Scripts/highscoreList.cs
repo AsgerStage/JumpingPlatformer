@@ -8,7 +8,6 @@ public class highscoreList : MonoBehaviour {
 
     public Text highscore;
 
-    // Use this for initialization
     void Start () {
 
         string test = "";

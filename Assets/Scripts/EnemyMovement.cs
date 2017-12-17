@@ -11,12 +11,6 @@ public class EnemyMovement : MonoBehaviour {
     float eulery;
     float eulerz;
 
-
-    void Start () {
-       
-    }
-	
-	// Update is called once per frame
 	void Update () {
         transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
 

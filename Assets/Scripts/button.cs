@@ -20,15 +20,11 @@ public class button : MonoBehaviour {
 
     IEnumerator active()
     {
-
-
         gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
 
         yield return new WaitForSeconds(0.2f);
         
         activeObject.SetActive(!activeObject.activeSelf);
-        Debug.Log("hit!");
-
     }
 
 

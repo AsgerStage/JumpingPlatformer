@@ -6,17 +6,26 @@ public class enemyFire : MonoBehaviour {
 
     public Transform firePoint;
     public GameObject gObj;
-	// Use this for initialization
-	void Start () {
-        StartCoroutine("active");
+    public float y;
+    bool isRunning = false;
+
+    private void Update()
+    {
+        if(firePoint.position.y <= y+0.02 && firePoint.position.y >= y - 0.02)
+        {
+            if(!isRunning)
+                StartCoroutine("active");
+        }
     }
 
     IEnumerator active()
     {
+        isRunning = true;
         yield return new WaitForSeconds(1f);
         GameObject bullet= Instantiate(gObj, firePoint);
         bullet.transform.parent = null;
-        StartCoroutine("active");
+        // StartCoroutine("active");
+        isRunning = false;
 
     }
 
@@ -32,5 +41,7 @@ public class enemyFire : MonoBehaviour {
             Destroy(gameObject);
 
     }
+
+
 
 }

@@ -10,7 +10,6 @@ public class options : MonoBehaviour {
 
     public void deleteHighscore()
     {
-        Debug.Log("done");
         PlayerPrefs.SetString("highscore", "");
         highscore.text = "";
     }

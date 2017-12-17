@@ -7,20 +7,13 @@ public class bulletMovement : MonoBehaviour {
     public float speed;
     public Vector3 direction;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
 	void Update () {
-        
         transform.position += direction * Time.deltaTime*speed;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("enemy"))
+        if (!other.gameObject.CompareTag("enemy") && !other.gameObject.CompareTag("pickUp") && !other.gameObject.CompareTag("toxic"))
             Destroy(gameObject);
     }
 }
