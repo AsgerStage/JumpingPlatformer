@@ -18,7 +18,7 @@ public class highscoreList : MonoBehaviour {
         string[] playerHighscore = new string[players.Length];
         for (int i = 0; i <= players.Length - 1; i++)
         {
-            string[] temp = players[i].Split('-');
+            string[] temp = players[i].Split('<');
             scores[i] = Int32.Parse(temp[0]);
             playerHighscore[i] = temp[1];
         }

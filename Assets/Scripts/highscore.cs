@@ -27,16 +27,16 @@ public class highscore : MonoBehaviour {
         {
             if (PlayerPrefs.GetString("highscore").Equals(""))
             {
-                PlayerPrefs.SetString("highscore", (points - (deaths * 2)) + "-" + highscoreName.text);
+                PlayerPrefs.SetString("highscore", (points - (deaths * 2)) + "<" + highscoreName.text);
             }
             else
             {
-                PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_" + (points - (deaths * 2)) + "-" + highscoreName.text);
+                PlayerPrefs.SetString("highscore", PlayerPrefs.GetString("highscore") + "_" + (points - (deaths * 2)) + "<" + highscoreName.text);
             }
         }
         else
         {
-            PlayerPrefs.SetString("highscore", (points - (deaths * 2))+"-"+highscoreName.text);
+            PlayerPrefs.SetString("highscore", (points - (deaths * 2))+"<"+highscoreName.text);
         }
 
         SceneManager.LoadScene("Menu");

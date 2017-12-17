@@ -61,7 +61,7 @@ public class PlayerHealth : MonoBehaviour {
             AudioSource.PlayClipAtPoint(source.clip, GameObject.FindGameObjectWithTag("MainCamera").transform.position, 1f);
             Destroy(gObj);
         }
-        else if (gObj.CompareTag("toxic"))
+        else if (gObj.CompareTag("toxic") || gObj.CompareTag("enemy"))
         {
             StartCoroutine("Die");
         }

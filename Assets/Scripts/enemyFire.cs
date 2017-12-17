@@ -14,34 +14,18 @@ public class enemyFire : MonoBehaviour {
         if(firePoint.position.y <= y+0.02 && firePoint.position.y >= y - 0.02)
         {
             if(!isRunning)
-                StartCoroutine("active");
+                StartCoroutine("shoot");
         }
     }
 
-    IEnumerator active()
+    IEnumerator shoot()
     {
         isRunning = true;
         yield return new WaitForSeconds(1f);
         GameObject bullet= Instantiate(gObj, firePoint);
         bullet.transform.parent = null;
-        // StartCoroutine("active");
         isRunning = false;
 
     }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(!other.gameObject.CompareTag("toxic"))
-        StartCoroutine("kill");
-    }
-
-    IEnumerator kill()
-    {
-        yield return new WaitForSeconds(0.2f);
-            Destroy(gameObject);
-
-    }
-
-
 
 }

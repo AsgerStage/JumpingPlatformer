@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4478194877568692}
   gObj: {fileID: 1377407992268500, guid: f5d248f5f73c28e48ad6c38a4dad0e03, type: 2}
+  y: 0
 --- !u!114 &114545291803962102
 MonoBehaviour:
   m_ObjectHideFlags: 1

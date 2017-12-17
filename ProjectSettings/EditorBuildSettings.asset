@@ -14,16 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menu.unity
     guid: cc601a848c895fd4285ba1d2bc8c8f93
-  - enabled: 1
+  - enabled: 0
     path: Assets/Level1.unity
     guid: 992d8bdd675cdca49ba6e2f0fd6b1e95
-  - enabled: 1
+  - enabled: 0
     path: Assets/Level2.unity
     guid: 97cde702d5a66b04cbe9f93c444ea03d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Level3.unity
     guid: 9ab6ff0b11411274484fd3aa51ba9746
-  - enabled: 1
+  - enabled: 0
     path: Assets/Level4.unity
     guid: fce4a8723df2ed4499379f1907537ac5
   - enabled: 1
